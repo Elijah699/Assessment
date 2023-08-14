@@ -1,13 +1,62 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,800;0,900;1,400;1,700&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: 'Work Sans', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* ====== Mobile Nav styles ======= */
+.icon {
+  border: 0;
+  height: 2.5rem;
+  width: 2.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+  display: none;
 }
+
+.header-menu .menu {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  gap: 56px;
+}
+
+@media (max-width: 767px) {
+  .icon {
+    display: block;
+  }
+
+  .header-menu.active .menu {
+    right: 0;
+  }
+
+  .header-menu .menu {
+    position: absolute;
+    top: 4.28rem;
+    right: -100%;
+    flex-direction: column;
+    padding: 20% 0;
+    width: 65%;
+    height: 92vh;
+    opacity: 1;
+    transition: 0.8s ease-in-out;
+    gap: 40px;
+  }
+
+  .header-menu li {
+    font-size: 20px;
+  }
+
+  .header-menu ul button {
+    margin: 1.5rem 0;
+  }
+}
+
+/* ======= End of Mobile Nav styles ======= */
